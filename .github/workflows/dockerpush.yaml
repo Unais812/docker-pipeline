@@ -3,6 +3,7 @@ name: Docker push
 on: [push]
 
 jobs:
+  build:
   docker:
     runs on: ubuntu-latest
 
