@@ -1,6 +1,6 @@
 resource "aws_instance" "this" {
-    ami = ami-0f50f13aefb6c0a5d
-    instance_type = t3.micro
+    ami = "ami-0f50f13aefb6c0a5d"
+    instance_type = "t3.micro"
     tags = {
         Name = "terraform create"
     }
