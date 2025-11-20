@@ -1,0 +1,20 @@
+name: Terraform CI
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Download Terraform CLI
+        uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: 1.13.4
+      - name: Terraform init
+        run: terraform init
+      - name: Terraform format
+        run: terraform fmt 
+      - name: Terraform Validate
+        run: terraform validate   
